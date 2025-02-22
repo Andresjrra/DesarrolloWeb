@@ -1,0 +1,76 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAE6E6; /* Color claro que sigue la línea del vinotinto */
+}
+
+/* Parte superior */
+.parteSuperior {
+    background-color: #800020; /* Vinotinto */
+    padding: 20px;
+    text-align: left;
+}
+
+.header-title {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Sección Sobre Nosotros */
+.sobreNosotros {
+    padding: 40px;
+    text-align: center;
+}
+
+.about-title {
+    color: #A52A2A; /* Marrón rojizo */
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Botones de redes sociales */
+.botones {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    transition: 0.3s;
+}
+
+/* Estilo para los íconos dentro de los botones */
+.boton img {
+    width: 24px;
+    height: 24px;
+    background-color: white; /* Fondo blanco para que los logos resalten */
+    padding: 4px; /* Espaciado para que el fondo blanco tenga margen */
+    border-radius: 5px; /* Bordes redondeados en los iconos */
+}
+
+/* Colores individuales */
+.linkedin { background-color: #0077B5; }  /* Azul LinkedIn */
+.instagram { background-color: #E4405F; } /* Rojo-rosa Instagram */
+.github { background-color: #333; } /* Negro GitHub */
+
+/* Hover (cambio de color al pasar el mouse) */
+.linkedin:hover { background-color: #005582; }
+.instagram:hover { background-color: #C13584; }
+.github:hover { background-color: #1b1b1b; }

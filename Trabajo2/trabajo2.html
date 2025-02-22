@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage: Local vs Session</title>
+
+
+
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        }
+        h2 {
+        text-align: center;
+        }
+        .container {
+        border: 1px solid #ccc;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        }
+        button {
+        margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Web Storage: Local Storage vs Session Storage</h2>
+
+    <div class="container">
+        <h3>Local Storage</h3>
+        <label>Nombre (Local Storage): 
+            <input type="text" id="localName">
+        </label>
+        <button onclick="saveLocalStorage()">Guardar en Local Storage</button>
+        <p id="localStorageResult">Nombre guardado en Local Storage: <span id="localStoredName"></span></p>
+    </div>
+
+    <div class="container">
+        <h3>Session Storage</h3>
+        <label>Nombre (Session Storage): 
+            <input type="text" id="sessionName">
+        </label>
+        <button onclick="saveSessionStorage()">Guardar en Session Storage</button>
+        <p id="sessionStorageResult">Nombre guardado en Session Storage: <span id="sessionStoredName"></span></p>
+    </div>
+
+    <script>
+        function saveLocalStorage() {
+        let name = document.getElementById("localName").value;
+        localStorage.setItem("nombreLocal", name);
+        document.getElementById("localStoredName").textContent = name;
+        }
+
+        function saveSessionStorage() {
+        let name = document.getElementById("sessionName").value;
+        sessionStorage.setItem("nombreSession", name);
+        document.getElementById("sessionStoredName").textContent = name;
+        }
+
+        document.getElementById("localStoredName").textContent = localStorage.getItem("nombreLocal") || "No hay nombre guardado.";
+        document.getElementById("sessionStoredName").textContent = sessionStorage.getItem("nombreSession") || "No hay nombre guardado.";
+    </script>
+
+</body>
+</html>

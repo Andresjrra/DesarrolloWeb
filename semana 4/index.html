@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+
+    <link rel="stylesheet" href="./src/css/main.css">
+</head>
+
+<body>
+    <div id="container-login" class="container-login">
+
+        <img id="logoSpotify" src="./src/svg/spotify-icon.svg" alt="Spotify">
+
+        <h1>Inicia sesión en Spotify</h1>
+        <button class="btnStyle" type="button"><img class="iconStyle" src="./src/svg/google.svg" alt="google">Continuar con
+            Google</button>
+        <button class="btnStyle" type="button"><img class="iconStyle" src="./src/svg/facebook.svg" alt="facebook">Continuar con
+            Facebook</button>
+        <button class="btnStyle" type="button"><img class="iconStyle" src="./src/svg/apple.svg" alt="apple">Continuar con Apple</button>
+        <button class="btnStyle" type="button">Continuar con numero de telefono</button>
+        <hr>
+        <span><strong>Correo electrónico o nombre de usuario</strong></span>
+        <input type="email" name="" id="" placeholder="Correo electrónico o nombre de usuario">
+        <span><strong>Contraseña</strong></span>
+        <input type="password" name="my_password" id="my_password" placeholder="Contraseña">
+        <button id="btnShowOrHide" class="showOrHide" onclick="showOrHide()"></button>
+
+        <script>
+            function showOrHide(){
+                var inputShow = document.getElementById("my_password");
+                var btnShowOrHide = document.getElementById("btnShowOrHide");
+                if(inputShow.type == "password"){
+                    inputShow.type = "text";
+                    btnShowOrHide.style.backgroundImage = "url('../img/hiden.png');";
+                }else{
+                   inputShow.type = "password";
+                   btnShowOrHide.style.backgroundImage = "url('../img/show.png');";
+                }
+
+            }
+        </script>
+
+
+
+        <button class="btn-login">Iniciar sesión</button>
+        <a href="">¿Se te ha olvidado la contraseña?</a>
+        <p>¿No tienes cuenta? <a href="">Suscríbete a Spotify</a></p>
+    </div>
+</body>
+
+</html>

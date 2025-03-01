@@ -116,7 +116,7 @@ body {
 }
 
 .extra-links p {
-    color: gray; /* Hace que "¿No tienes cuenta?" sea gris */
+    color: gray; 
     font-size: 14px;
 }
 

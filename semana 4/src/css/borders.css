@@ -1,0 +1,33 @@
+body{
+    margin: 5%;
+}
+
+.border-example{
+    padding: 20px;
+    margin-bottom: 20px;
+    border-width: 5px;
+    border-color:blue;
+    text-align: center;
+    font-size: 20px;
+}
+
+.dotted{
+    border-style: dotted;
+}
+
+.dashed{
+    border-style: dashed;
+
+}
+
+.solid{
+    border-style: solid;
+}
+
+.double{
+    border-style: double;
+}
+
+.groove{
+    border-style: groove;
+}

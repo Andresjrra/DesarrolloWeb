@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Astonpoliz';
+    src: url('../fonts/Astonpoliz.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+*{
+    font-family: 'Astonpoliz';
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(69, 69, 69), rgb(44, 44, 44));
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.container-login {
+    background-color: black;
+    width: 80%;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 3%;
+    color: white;
+
+    position: relative;
+}
+
+#logoSpotify {
+    position: relative;
+    left: 50%;
+    top: 10%;
+    width: 5%;
+}
+
+h1 {
+    text-align: center;
+
+    margin-top: 7%;
+    margin-bottom: 32px;
+}
+
+button{
+    box-sizing: border-box; /* ????? */
+    background-color: transparent;
+    border-radius: var(--encore-button-corner-radius, 9999px);
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid var(--essential-subdued, #818181);
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 1%;
+    margin-bottom: 1%;
+    margin-left: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-login{
+    background-color: #3be477;
+    color: black;
+    padding: 2%;
+}
+
+.btn-login:hover{
+    transform: scale(1.04);
+}
+
+.btnStyle:hover{
+    border: 1px solid var(--essential-subdued, #ffffff);
+}
+
+.showOrHide{
+    background-color: #ffffff;
+    background-image: url('../img/show.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+
+    width: 20px;
+}
+
+hr{
+    margin: 5%;
+    color: #4b4b4b7b;
+}
+
+.iconStyle{
+    width: 7%;
+    margin-right: 25px;
+}
+
+input{
+    background-color: transparent;
+    border: 1px solid var(--essential-subdued, #818181);
+    color: #ffffff;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+span{
+font-size: 13px;
+}
+
+input:hover{
+    border: 1px solid var(--essential-subdued, #ffffff);
+}

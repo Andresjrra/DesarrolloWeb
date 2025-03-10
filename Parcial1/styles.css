@@ -1,29 +1,127 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
 }
+
+/* Contenedor principal */
 .container {
-    margin-top: 50px;
+    margin: 20px auto;
     padding: 20px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
+    max-width: 800px;
 }
-.hidden {
-    display: none;
+
+/* Contenedor de la barra de navegación */
+.container-header {
+    background-color: #007bff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.loader {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #ccc;
-    border-top-color: #007bff;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 100px auto;
+
+/* Estilos generales para los botones */
+.nav-button, .logout-button {
+    width: 200px; /* Mismo ancho para todos los botones */
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
 }
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+
+/* Botones de navegación */
+.nav-button {
+    background-color: #0056b3;
+    color: white;
+}
+
+.nav-button:hover {
+    background-color: #003d80;
+}
+
+/* Botón de cerrar sesión */
+.logout-button {
+    background-color: red;
+    color: white;
+}
+
+.logout-button:hover {
+    background-color: darkred;
+}
+
+/* Mensaje IMPORTANTE */
+.warning-box {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.warning-box strong {
+    font-weight: bold;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
 }

@@ -7,28 +7,46 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="loader" id="loader"></div>
-    <div class="container" id="app" style="display: none;">
-        <header>
-            <h1>EPS Salud+</h1>
-        </header>
-        <main>
-            <h2>Reserva tu cita</h2>
-            <form id="reservationForm">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" required>
-                
-                <label for="date">Fecha:</label>
-                <input type="date" id="date" required>
-                
-                <label for="time">Hora:</label>
-                <input type="time" id="time" required>
-                
-                <button type="submit">Reservar</button>
-            </form>
-            <div id="confirmation" class="hidden"></div>
-        </main>
+    <div class="container-header">
+        <div>
+            <button class="nav-button">Asignación de citas</button>
+            <button class="nav-button">Consulta, pago y cancelación</button>
+        </div>
+        <button class="logout-button">Cerrar sesión</button>
     </div>
-    <script src="script.js"></script>
-</body>
-</html>
+
+    <div class="container">
+        <header>
+            <h1>Consulta, Pago y Cancelación de Citas</h1>
+            <form>
+                <label for="id">Tipo y número de identificación:</label>
+                <input type="text" id="id">
+                
+                <label for="name">Nombre:</label>
+                <input type="text" id="name">
+                
+                <button type="submit">Buscar</button>
+            </form>
+        </header>
+
+        <div class="warning-box">
+            <strong>IMPORTANTE:</strong> Solo se pueden cancelar citas de medicina general, odontología, salud visual y especialidades.
+        </div>
+
+        <h2>Lista de Citas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha - Hora</th>
+                    <th>IPS</th>
+                    <th>Servicio</th>
+                    <th>Profesional</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>Asignación de Citas</h2>
+       

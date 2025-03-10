@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas EPS</title>
+    <title>SURA</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="./src/favicon.png">
 </head>
 <body>
     <div class="container-header">
-        <div>
+        <img src="./src/logoSura.png" alt="Sura Logo" class="logo-sura">
+        
+        <div class="nav-buttons">
             <button class="nav-button">Asignación de citas</button>
             <button class="nav-button">Consulta, pago y cancelación</button>
         </div>
+    
         <button class="logout-button">Cerrar sesión</button>
     </div>
-
     <div class="container">
         <header>
-            <h1>Consulta, Pago y Cancelación de Citas</h1>
+            <h2 class="cabezas">Consulta, Pago y Cancelación de Citas</h2>
+
+
             <form>
                 <label for="id">Tipo y número de identificación:</label>
                 <input type="text" id="id">
@@ -29,7 +34,7 @@
             </form>
         </header>
 
-        <div class="warning-box">
+        <div class="importante">
             <strong>IMPORTANTE:</strong> Solo se pueden cancelar citas de medicina general, odontología, salud visual y especialidades.
         </div>
 
@@ -41,12 +46,74 @@
                     <th>IPS</th>
                     <th>Servicio</th>
                     <th>Profesional</th>
-                    <th>Acciones</th>
+                    <th>Orden - Valor</th>
+                    <th>Pagar</th>
+                    <th>Reprogramar</th>
+                    <th>Cancelar</th>
                 </tr>
             </thead>
+            <tbody>
+                <tr>
+                    <td>2025/03/15 09:40</td>
+                    <td>Centro Médico Sura Aventura Plaza</td>
+                    <td>Consulta de valoración por odontólogo general</td>
+                    <td>Lievano Obando William</td>
+                    <td></td>
+                    <td></td>
+
+                    //Esto lo hice asi porque cuando queria colocar el logo no se mostraba, asi que encontré esta solución
+                    <td><button style="background: yellow; border: none; padding: 5px 10px;">📅</button></td>
+                    <td><button style="background: blue; color: white; border: none; padding: 5px 10px;">Cancelar</button></td>
+                </tr>
+                <tr>
+                    <td>2025/04/11 11:45</td>
+                    <td>CL Castellana EDG Visión Limonar - SUC</td>
+                    <td>Consulta Optometría</td>
+                    <td>Diaz del Castillo Obregon Andrea del Pilar</td>
+                    <td></td>
+                    <td></td>
+                    <td><button style="background: yellow; border: none; padding: 5px 10px;">📅</button></td>
+                    <td><button style="background: blue; color: white; border: none; padding: 5px 10px;">Cancelar</button></td>
+                </tr>
+            </tbody>
         </table>
     </div>
 
     <div class="container">
-        <h2>Asignación de Citas</h2>
-       
+        <h2 class="cabezas">Asignación de Citas</h2>
+        <div class="appointment-card">
+            <h3>Información de Afiliado</h3>
+            <p><strong>Afiliado:</strong> CC 1.108.560.958 - ORTEGÓN HIDALGO ANDRÉS FELIPE</p>
+            <p><strong>Servicio:</strong> CONSULTA MEDICINA GENERAL SALUD CITA PRESENCIAL</p>
+        </div>
+        <div class="appointment-info">
+            <label for="profesional">Profesional:</label>
+            <select id="profesional">
+                <option> DÍAZ MOLINA ANDRÉS FELIPE (MEDICO GENERAL) - 2025/03/19</option>
+            </select>
+        </div>
+        <div class="appointment-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha - Hora</th>
+                        <th>IPS</th>
+                        <th>Servicio</th>
+                        <th>Profesional</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>19/03/2025 - 13:40</td>
+                        <td>CENTRO MEDICO SURA AVENTURA PLAZA</td>
+                        <td>Consulta Medicina General</td>
+                        <td>Díaz Molina Andrés Felipe</td>
+                        <td><button class="assign-btn">Asignar Cita</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
